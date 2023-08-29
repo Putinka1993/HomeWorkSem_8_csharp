@@ -30,11 +30,10 @@ void PrintArray(int[,] array){
 
 void PrintSortArray(int[,] array){
     int[] TempArray = new int[array.GetLength(1)];
-    int[,] ResultArray = new int[array.GetLength(0), array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++){
         for(int j = 0; j < array.GetLength(1); j++){
             TempArray[j] = array[i,j];
-        }
+        } // buble sort
         for(int r = 1; r < array.GetLength(1); r++){
             for(int c = 0; c < array.GetLength(1)-1; c++){
                 if(TempArray[r] > TempArray[c]){
